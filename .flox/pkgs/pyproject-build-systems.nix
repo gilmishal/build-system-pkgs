@@ -24,12 +24,12 @@ stdenv.mkDerivation {
   dontConfigure = true;
 
   installPhase = ''
-    mkdir -p $out
-    cp default.nix $out/
-    cp overlay.nix $out/
-    cp build-systems.toml $out/
-    cp pyproject.toml $out/
-    cp uv.lock $out/
+    mkdir -p $out/pyproject-build-systems
+    cp default.nix $out/pyproject-build-systems/
+    cp overlay.nix $out/pyproject-build-systems/
+    cp build-systems.toml $out/pyproject-build-systems/
+    cp pyproject.toml $out/pyproject-build-systems/
+    cp uv.lock $out/pyproject-build-systems/
   '';
 
   meta = {
